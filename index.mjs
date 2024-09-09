@@ -1,6 +1,6 @@
-import core from '@actions/core'
+import core from '@actions/core';
 import AWS from './src/aws.mjs';
-import { determineIp } from './src/ip.mjs'
+import { determineIp } from './src/ip.mjs';
 import * as state from './src/state.mjs';
 import * as io from './src/io.mjs';
 
@@ -26,8 +26,6 @@ async function main() {
     core.info(`Ip address to use: ${ip}`);
 
     const client = new AWS({
-      accessKeyId: io.getAwsAccessKeyId(),
-      secretAccessKey: io.getAwsSecretAccessKey(),
       region: io.getAwsRegion(),
     });
 
@@ -68,8 +66,6 @@ async function cleanup() {
   const ip = state.getIp();
 
   const client = new AWS({
-    accessKeyId: io.getAwsAccessKeyId(),
-    secretAccessKey: io.getAwsSecretAccessKey(),
     region: io.getAwsRegion(),
   });
 

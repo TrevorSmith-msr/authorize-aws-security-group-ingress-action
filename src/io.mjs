@@ -6,8 +6,6 @@ const maxPort = 65535;
 const ipKey = 'ip';
 const protocolKey = 'protocol';
 const portKey = 'port';
-const awsAccessKeyIdKey = 'aws-access-key-id';
-const awsSecretAccessKeyKey = 'aws-secret-access-key';
 const awsSecurityGroupIdKey = 'aws-security-group-id';
 const awsRegionKey = 'aws-region';
 const ruleIdKey = 'aws-security-group-rule-id';
@@ -25,20 +23,6 @@ export function getIp() {
  */
 export function setIp(ip) {
     core.setOutput(ipKey, ip);
-}
-
-/**
- * @return {string}
- */
-export function getAwsAccessKeyId() {
-    return core.getInput(awsAccessKeyIdKey);
-}
-
-/**
- * @return {string}
- */
-export function getAwsSecretAccessKey() {
-    return core.getInput(awsSecretAccessKeyKey);
 }
 
 /**

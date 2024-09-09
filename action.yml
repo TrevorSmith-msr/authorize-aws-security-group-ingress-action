@@ -8,12 +8,6 @@ inputs:
   aws-security-group-id:
     description: The id of the security group to add the rule to
     required: true
-  aws-access-key-id:
-    description: Your amazon access key id
-    required: true
-  aws-secret-access-key:
-    description: Your amazon secret access key
-    required: true
   aws-region:
     description: The aws region to use
     required: false

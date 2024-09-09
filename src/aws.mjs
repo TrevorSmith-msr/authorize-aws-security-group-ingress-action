@@ -1,14 +1,10 @@
 import { EC2Client, AuthorizeSecurityGroupIngressCommand, RevokeSecurityGroupIngressCommand } from '@aws-sdk/client-ec2';
 
 export default class AWS {
-  constructor({ accessKeyId, secretAccessKey, region }) {
+  constructor({ region }) {
     this.client = new EC2Client({
       apiVersion: "2016-11-15",
-      region: region,
-      credentials: {
-        accessKeyId: accessKeyId,
-        secretAccessKey: secretAccessKey
-      }
+      region: region
     });
   }
 
